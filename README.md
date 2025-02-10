@@ -19,6 +19,10 @@ The pipeline is shared as a sanitised version of our rapidly-prototyped research
 - `chained_regressors_pp_refactor_feb2025.py` – Main ML pipeline implementation.
 - `params.yaml` - Parameter file needed to configure the pipeline.
 
+## Example Data
+[COSMOS2015_with_pdz_all_ebv.pq](https://drive.google.com/drive/folders/1if3M_UBgmO17ZDPS-U0Qt8njq8SvVhF5?usp=drive_link
+)
+
 ## Data Format Requirements
 - Input data needs to be in parquet format.
 - At least 2 training features required (float).
