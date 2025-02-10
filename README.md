@@ -16,7 +16,7 @@ The pipeline is shared as a sanitised version of our rapidly-prototyped research
 - **Support for missing photometry**, making the model robust to real-world survey conditions.
 
 ## Code Structure
-- `chained_regressors_pp_refactor_feb2025.py` – Main ML pipeline implementation.
+- `chained_regressors_pp.py` – Main ML pipeline implementation.
 - `params.yaml` - Parameter file needed to configure the pipeline.
 
 ## Example Data
