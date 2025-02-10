@@ -50,7 +50,7 @@ conda env create -f requirements.yaml
 ## Usage
 ### Running the pipeline
 ```sh
-python chained_regressors_pipeline.py params.yaml  
+python chained_regressors_pp.py params.yaml  
 ```
 
 
