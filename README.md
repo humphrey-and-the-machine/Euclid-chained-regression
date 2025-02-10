@@ -38,7 +38,7 @@ The pipeline is shared as a sanitised version of our rapidly-prototyped research
 ### Setup
 Clone the repository and install dependencies:
 ```sh
-git clone https://github.com/your-repo/catboost-galaxy-ml.git  
+git clone https://github.com/humphrey-and-the-machine/Euclid-chained-regression.git
 cd catboost-galaxy-ml  
 conda env create -f requirements.yaml 
 ```
