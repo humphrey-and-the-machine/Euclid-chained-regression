@@ -20,7 +20,7 @@ The pipeline is shared as a sanitised version of our rapidly-prototyped research
 - `params.yaml` - Parameter file needed to configure the pipeline.
 
 ## Example Data
-Data corresponding to text Case 0 in our paper. This data was derived from the COSMOS 2015 photometry catalogue of Laigle, C., McCracken, H.J., Ilbert, O., et al. 2016, ApJS, 224, 24.
+In the interest of open science, and to allow others to benchmark their methods against ours more easily, we share the dataset corresponding to text Case 0 in our paper. This data was derived from the COSMOS 2015 photometry catalogue of Laigle, C., McCracken, H.J., Ilbert, O., et al. 2016, ApJS, 224, 24.
 [COSMOS2015_with_pdz_all_ebv.pq](https://drive.google.com/drive/folders/1if3M_UBgmO17ZDPS-U0Qt8njq8SvVhF5?usp=drive_link
 )
 
