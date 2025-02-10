@@ -1,0 +1,12 @@
+name: catboost-cr-3.6.8
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6.8
+  - catboost
+  - scikit-learn
+  - pandas
+  - numpy
+  - matplotlib
+  - dask
