@@ -1,0 +1,99 @@
+# define the data source
+data_file: COSMOS2015_with_pdz_all_ebv.pq
+
+# data processing options
+data_options:
+  sampled_fraction: 1.0
+  features:
+    - u_MAG_APER3
+    - B_MAG_APER3
+    - V_MAG_APER3
+    - r_MAG_APER3
+    - ip_MAG_APER3
+    - zp_MAG_APER3
+    - Y_MAG_APER3
+    - J_MAG_APER3
+    - H_MAG_APER3
+    - Ks_MAG_APER3
+  targets:
+    - PHOTOZ
+    - SFR_BEST
+    - MASS_BEST
+    - AGE
+    - EXTINCTION
+  index: NUMBER
+  rename:
+    PHOTOZ: redshift
+  to_log: # OPTIONAL. Lists columns that need log10 transform applied.
+    - AGE
+  mag_cuts:
+    H_MAG_APER3: 24
+  conditional_cuts:
+    f1: [drop_neq, PHOTOZ, 0]
+    f2: [drop_geq, PHOTOZ, 9.8]
+  require_detection:
+    - H_MAG_APER3
+  missing: -99.9
+  weight_targets:
+    - redshift
+    - MASS_BEST
+    - SFR_BEST
+    - AGE
+    - EXTINCTION
+
+# model training options
+test_size: 0.33
+n_iter: 4
+random_state: null # should be an integer or null (some randomness persists even when != null)
+calculate_weights: true
+zbins_dict: # lists of lists giving edges of each bin
+  redshift:
+    - [0, 0.15]
+    - [0.15, 0.3]
+    - [0.3, 0.4]
+    - [0.4, 0.5]
+    - [0.5, 1]
+    - [1, 1.5]
+    - [1.5, 2]
+    - [2, 3]
+    - [3, 4]
+    - [4, 10.1]
+  MASS_BEST:
+    - [0, 7]
+    - [7, 8]
+    - [8, 9]
+    - [9, 10]
+    - [10, 11]
+    - [11, 14]
+  SFR_BEST:
+    - [-10, -3]
+    - [-3, -1]
+    - [-1, 0]
+    - [0, 1]
+    - [1, 2]
+    - [2, 10]
+  AGE:
+    - [1, 8.2]
+    - [8.2, 8.7]
+    - [8.7, 9.1]
+    - [9.1, 9.5]
+    - [9.5, 14]
+  EXTINCTION:
+    - [-1, 0.2]
+    - [0.2, 0.5]
+    - [0.5, 0.8]
+    - [0.8, 1.2]
+    - [1.2, 10]
+wvals: [0.1, 0.33, 0.5, 0.7, 0.9, 1.0]
+task_type: GPU
+thread_count: null
+max_depth_simple: 4
+n_estimators_simple: 500
+max_depth_complex: 10
+n_estimators_complex: 2000
+estimate_uncertainty: true
+
+# output options
+save_output: false
+output_filename: null
+output_tag: ""
