@@ -39,7 +39,7 @@ The pipeline is shared as a sanitised version of our rapidly-prototyped research
 Clone the repository and install dependencies:
 ```sh
 git clone https://github.com/humphrey-and-the-machine/Euclid-chained-regression.git
-cd catboost-galaxy-ml  
+cd Euclid-chained-regression
 conda env create -f requirements.yaml 
 ```
 
