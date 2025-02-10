@@ -6,7 +6,7 @@ This repository contains the implementation of a machine-learning pipeline devel
 > **Euclid Preparation: Estimating Galaxy Physical Properties Using CatBoost Chained Regressors with Attention**  
 > *Eudlid Collaboration: A. Humphrey et al. (2025), Astronomy & Astrophysics, in review.*
 
-The pipeline is shared as a sanitised version of our rapidly-prototyped research code, which was designed and tested as part of a `data challenge' within the Euclid Collaboration. As set up here, it predicts galaxy redshift, stellar mass, star formation rate (SFR), specific SFR,  colour excess (E(B−V)), and stellar age using Euclid and ancillary photometric data. While our paper focuses on predicting these properties, the code can also be used to predict other galaxy properties, or indeed, the properties of other types of astronomical sources. 
+The pipeline is shared as a sanitised version of our rapidly-prototyped research code, which was designed and tested as part of a `data challenge' within the Euclid Collaboration. As set up here, it predicts galaxy redshift, stellar mass, star formation rate (SFR), specific SFR,  colour excess (E(B−V)), and stellar age using Euclid and ancillary photometric data. While our paper focuses on predicting these properties, the code can also be used to predict other galaxy properties, or indeed, the properties of other types of astronomical sources after minor modification. 
 
 ## Features
 - **Gradient-boosted regression trees (CatBoost)** for high-performance property estimation, with GPU support.  
@@ -18,6 +18,11 @@ The pipeline is shared as a sanitised version of our rapidly-prototyped research
 ## Code Structure
 - `chained_regressors_pp_refactor_feb2025.py` – Main ML pipeline implementation.
 - `params.yaml` - Parameter file needed to configure the pipeline.
+
+## Data Format Requirements
+- Input data needs to be in parquet format.
+- At least 2 training features required (float).
+- At least 2 target labels required (float).
 
 ## Installation & Dependencies
 ### Requirements
