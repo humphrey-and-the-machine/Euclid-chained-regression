@@ -4,7 +4,7 @@
 This repository contains the implementation of a machine-learning pipeline developed within the Euclid Collaboration to estimate galaxy physical properties using **CatBoost chained regressors and some other tricks**. The methodology is described in the paper:
 
 > **Euclid Preparation: Estimating Galaxy Physical Properties Using CatBoost Chained Regressors with Attention**  
-> *Eudlid Collaboration: A. Humphrey et al. (2025), Astronomy & Astrophysics, in review.*
+> *Euclid Collaboration: A. Humphrey et al. (2025), Astronomy & Astrophysics, in review.*
 
 The pipeline is shared as a sanitised version of our rapidly-prototyped research code, which was designed and tested as part of a `data challenge' within the Euclid Collaboration. As set up here, it predicts galaxy redshift, stellar mass, star formation rate (SFR), specific SFR,  colour excess (E(B−V)), and stellar age using Euclid and ancillary photometric data. While our paper focuses on predicting these properties, the code can also be used to predict other galaxy properties, or indeed, the properties of other types of astronomical sources after minor modification. 
 
