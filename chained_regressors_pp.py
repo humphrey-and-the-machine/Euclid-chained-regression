@@ -1,4 +1,4 @@
-# Andrew Humphrey, Pedro Cunha, (2021-present)
+# Andrew Humphrey (2021)
 
 import time
 import pickle
@@ -13,12 +13,13 @@ from sklearn.metrics import (
     r2_score, 
     mean_absolute_error, 
     median_absolute_error,
-)
+	)
 
-from catboost import (CatBoostClassifier, 
-                      CatBoostRegressor, 
-                      Pool,
-)
+from catboost import (
+	CatBoostClassifier, 
+    CatBoostRegressor, 
+    Pool,
+	)
 
 import dask
 import dask.dataframe as dd
@@ -36,10 +37,11 @@ def drop_geq(df,col,value):
 def drop_leq(df,col,value):
 	return df[df[col] > value]
 
-funct_dict = {'drop_neq': drop_neq,
-			  'drop_geq': drop_geq, 
-			  'drop_leq': drop_leq,
-			  }
+funct_dict = {
+	'drop_neq': drop_neq,
+	'drop_geq': drop_geq, 
+	'drop_leq': drop_leq,
+	}
 
 # start timer
 t0 = time.time()
@@ -167,7 +169,7 @@ if 'snr_cuts' in metadata.keys():
 print(len(df),'rows of data')
 
 # feature engineering
-bands = [x for x in metadata['features'] if x[0]!='d']
+bands = [x for x in metadata['features'] if x[0]!='d'] # modify as needed
 colours=[]
 n=len(bands)
 
