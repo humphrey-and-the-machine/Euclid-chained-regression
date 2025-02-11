@@ -15,8 +15,7 @@ from sklearn.metrics import (
     median_absolute_error,
 	)
 
-from catboost import (
-	CatBoostClassifier, 
+from catboost import ( 
     CatBoostRegressor, 
     Pool,
 	)
